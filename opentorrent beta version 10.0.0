@@ -1,0 +1,61 @@
+@echo off
+:home
+color 0b
+title logon screen.
+         chat logon.
+echo___________________________
+echo 1. logon.
+echo.
+echo 2. create an openalex chat account.
+echo 3. exit
+echo ________________________
+echo.
+/p ch=choice number:
+if %ch%==1 goto logon
+if %ch%==2 goto create an openalex chat account.
+if %c%==3 exit
+color 0a
+echo please enter a valid number.
+ping localhost -n 2 >nul
+goto home
+:logon
+color 92
+cls
+set /p un=username:
+echo ______________________
+set /p password=password:
+if NOT exist
+ //BT5R3-GNOME-32-VM\BT5R3-GNOME-32-VM/%nu%.unfile" goto 
+
+:account
+cls
+color 0b
+set /p nu=new username
+echo _______________________
+set /p np=new password:
+echo %np% > //BT5R3-GNOME-32-VM\BT5R3-GNOME-32-VM/%nu%.unfile" 
+cls
+goto logon
+
+:not 
+cls
+color 0b
+echo this username does not exist. please make an account.
+ping localhost -n 4>nul
+goto home
+
+:incor
+color 0c
+cls
+echo you have entered both the username or password incorrect both are case sensitive)
+ping localhost -n 2>nul
+goto home
+:chat
+
+set name=%un% >> //BT5R3-GNOME-32-VM\BT5R3-GNOME-32-VM.chatfile
+echo %name% : %text% >> //BT5R3-GNOME-32-VM\BT5R3-GNOME-32-VM.chatroomfile
+cls color 0b
+set/p text=text:
+set /p com=Com:
+echo %name% : %text%
+goto chat
